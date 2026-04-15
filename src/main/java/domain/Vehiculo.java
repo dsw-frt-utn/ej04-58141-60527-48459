@@ -8,8 +8,9 @@ public abstract class Vehiculo {
     protected double capacidadCarga;
     protected Sucursal sucursal;
     private VehiculoTipo tipo;
+    private double kmRec;
 
-    public Vehiculo(VehiculoTipo tipo, String patente, Marca marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal) {
+    public Vehiculo(VehiculoTipo tipo, String patente, Marca marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal, double kmRec) {
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;
@@ -17,6 +18,15 @@ public abstract class Vehiculo {
         this.capacidadCarga = capacidadCarga;
         this.sucursal = sucursal;
         this.tipo = tipo;
+        this.kmRec = kmRec;
+    }
+
+    public double getKmRec() {
+        return kmRec;
+    }
+
+    public void setKmRec(double kmRec) {
+        this.kmRec = kmRec;
     }
 
     public String getPatente() {

@@ -44,11 +44,11 @@ public class Persistencia {
         Marca m3 = marcas.get(2);
         Marca m4 = marcas.get(3);
         
-        VehiculoElectrico v1 = new VehiculoElectrico("AE123FG", m1, "Kangoo E-Tech", 2020, 1000, s1, 16);
-        VehiculoElectrico v2 = new VehiculoElectrico("AF456HI", m2, "E-Transit", 2021, 1300, s2, 16);
+        VehiculoElectrico v1 = new VehiculoElectrico("AE123FG", m1, "Kangoo E-Tech", 2020, 1000, s1,100, 16);
+        VehiculoElectrico v2 = new VehiculoElectrico("AF456HI", m2, "E-Transit", 2021, 1300, s2,100, 16);
 
-        VehiculoCombustible v3 = new VehiculoCombustible("AC789JK", m3, "Daily", 2023, 1200, s1, 8, 1.5);
-        VehiculoCombustible v4 = new VehiculoCombustible("AD321LM", m4, "Sprinter", 2020, 1200, s2, 7, 1);
+        VehiculoCombustible v3 = new VehiculoCombustible("AC789JK", m3, "Daily", 2023, 1200, s1,100, 8, 1.5);
+        VehiculoCombustible v4 = new VehiculoCombustible("AD321LM", m4, "Sprinter", 2020, 1200, s2,100, 7, 1);
         
         vehiculos.add(v1);
         vehiculos.add(v2);
