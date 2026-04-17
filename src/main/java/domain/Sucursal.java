@@ -13,10 +13,6 @@ public class Sucursal {
         this.responsable = responsable;
     }
 
-    public Sucursal(String codigo) {
-        this.codigo = codigo;
-    }
-
     public String getCodigo() {
         return codigo;
     }

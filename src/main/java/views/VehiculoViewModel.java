@@ -23,7 +23,7 @@ public class VehiculoViewModel {
         anio = vehiculo.getAnio();
         kmPorLitro = vehiculo instanceof VehiculoCombustible ? ((VehiculoCombustible)vehiculo).getKilometrosPorLitro() : 0;
         litrosExtra = vehiculo instanceof VehiculoCombustible ? ((VehiculoCombustible)vehiculo).getLitrosExtra() : 0;
-        kmARecorrer = vehiculo.getKmRec();
+        kmARecorrer = 100;
     }
 
     public String getPatente() {
