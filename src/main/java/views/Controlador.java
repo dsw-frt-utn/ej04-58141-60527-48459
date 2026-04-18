@@ -11,7 +11,7 @@ public class Controlador {
     
     public static ArrayList<VehiculoViewModel> getVehiculos(){
         ArrayList<VehiculoViewModel> vehiculos = new ArrayList<>();
-        for(Vehiculo vehiculo : Persistencia.getVehiculos()) {
+        for(Vehiculo vehiculo : ListarVehiculosView.getVehiculos()) {
             vehiculos.add(new VehiculoViewModel(vehiculo));
         }
         return vehiculos;
@@ -22,7 +22,7 @@ public class Controlador {
         double consumoCombustible= 0;
         for(Map.Entry<String, Double> entry : vehiculos.entrySet()){
            double consumo = 0;
-           Optional<Vehiculo> vehiculo = Persistencia.getVehiculo(entry.getKey());
+           Optional<Vehiculo> vehiculo = ListarVehiculosView.getVehiculo(entry.getKey());
            if(vehiculo.isPresent()){
                consumo = vehiculo.get().calcularConsumo(entry.getValue());
                consumoElectricos += vehiculo.get().esDe(VehiculoTipo.ELECTRICO) ? consumo : 0;

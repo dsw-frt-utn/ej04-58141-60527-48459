@@ -1,9 +1,11 @@
 package views;
 
+import domain.Vehiculo;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 
@@ -15,7 +17,7 @@ public class ListarVehiculosView extends javax.swing.JFrame {
     public ListarVehiculosView() {
         initComponents();
         listarVehiculos();
-    }
+    }   
     private void listarVehiculos(){
         ArrayList<VehiculoViewModel> vehiculos = Controlador.getVehiculos();
         vehiculosGrid.setModel(new DefaultTableModel(new Object[][] {}, 
@@ -35,7 +37,16 @@ public class ListarVehiculosView extends javax.swing.JFrame {
             });
         }
     }
-
+    private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
+    public static ArrayList<Vehiculo> getVehiculos(){
+        return vehiculos;
+    }
+    
+    public static Optional<Vehiculo> getVehiculo(String patente){
+        return vehiculos.stream()
+                .filter(v -> v.getPatente().equals(patente))
+                .findFirst();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
