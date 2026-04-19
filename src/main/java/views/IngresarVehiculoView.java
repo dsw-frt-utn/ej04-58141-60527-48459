@@ -122,6 +122,10 @@ public class IngresarVehiculoView extends javax.swing.JFrame {
 
         jLabel13.setText("Litros extra cada 15 Km:");
 
+        jTextField6.setText("0");
+
+        jTextField7.setText("0");
+
         jButton1.setText("Volver");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
