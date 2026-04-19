@@ -6,7 +6,6 @@ import views.PMenu;
 
 public class Program {
     public static void main(String[] args) throws IllegalArgumentException, InvalidPropertiesFormatException {
-        Persistencia.inicializar();
         PMenu view = new PMenu();
         view.setVisible(true);
     }

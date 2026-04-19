@@ -65,13 +65,9 @@ public class PMenu extends javax.swing.JFrame {
     }
 
     private void agregarVehiculoButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        javax.swing.JOptionPane.showMessageDialog(this,
-            "La opción de agregar vehículo aún no está disponible.",
-            "Agregar vehiculo",
-            javax.swing.JOptionPane.INFORMATION_MESSAGE);
-
-        // IngresarVehiculoView view2 = new IngresarVehiculoView();
-        // view2.setVisible(true);
+                
+         IngresarVehiculoView view2 = new IngresarVehiculoView();
+         view2.setVisible(true);
     }
 
     public static void main(String[] args) {
